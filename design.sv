@@ -71,7 +71,7 @@ module APB_slave(
   
   always@(next_state) begin
     if(PSEL == 1 && PENABLE == 1 && PRESETn == 1 ) begin
-      PREADY = 1; // 0 FOR WAIT
+      PREADY = 1; 
     end
     if(PREADY == 1)
       @(posedge PCLK) PREADY = 0;
